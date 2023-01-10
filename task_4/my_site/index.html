@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="css/my_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>This is Kisa</h1>
+        <div class="img_row">
+            <img src="img/cat.jpg" alt="this is my cat">
+            <img src="img/dog.jpg" alt="this is my cat">
+            <img src="img/turtle.jpg" alt="this is my cat">
+        </div>
+    </div>
+    <script>
+
+        const images = document.querySelectorAll('img')
+        images.forEach(img => {
+            img.addEventListener('click', createBorder)
+        })
+        const heading = document.querySelector('h1');
+
+        function createBorder() {
+            let elem = this;
+            elem.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
